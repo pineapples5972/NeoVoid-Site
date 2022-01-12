@@ -3,16 +3,16 @@
   /* Color scheme */
 
   --textcolor: #dadada;
-  --bgcolor: #0d0d0f;
-  --highlight: #9c3892;
+  --bgcolor: #0f0d11;
+  --highlight: #dd61ce;
 
 }
 
 @media (prefers-color-scheme: dark) {
   * {
     --textcolor: #dadada;
-    --bgcolor: #141414;
-    --highlight: #ffc400;
+    --bgcolor: #0f0d11; /* #0d0d0f; #141414; */
+    --highlight: #dd61ce; /*#ba4cac; #ffc400; */
   }
 }
 
@@ -185,7 +185,7 @@ pre, textarea { /* for code samples */
   white-space: pre;
   border:0;
   border-radius: 4px;
-  background:rgba(255,255,100,.075);
+  background:rgba(86.7,38.0,80.8,.060);
   box-shadow: inset 1px 1px 0 rgba(0,0,0,.2), inset -1px -1px 0 rgba(0,0,0,.04) ;
 }
 
