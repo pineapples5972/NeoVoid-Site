@@ -1,4 +1,4 @@
-<!-- LAST UPDATED -- Tue Jan 11 08:05:01 PM IST 2022 -->
+<!-- LAST UPDATED -- Wed Feb  9 06:54:54 PM IST 2022 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,19 +18,37 @@
     <!-- You could also inline the stylesheet -->
     <link rel="stylesheet" href="style.css">
 
+    <style>
+      div {
+	  padding: 30px;
+	  border:1px solid #4CAF50;
+      }
+      div1 {
+	  padding: 10px;
+	  border: 1px solid #FFEE05;
+      }
+    </style>
+
+
   </head>
   <body>
 
     <header>
       <h1>
+	<div1>
         <a href="#home">Neo Void</a>
+	</div1>
       </h1>
+
+      <div1>
       <nav>
         <a href="#links">Links</a>
         <a href="#blog">Blog</a>
         <a href="#photos">Photos</a>
         <a href="#portfolio">Portfolio</a>
       </nav>
+      </div1>
+
     </header>
 
     <main>
@@ -50,7 +68,8 @@
 	  </figure>
         </div>
         --->
-	
+
+	<div>
 	  <blockquote>
 	    <p><em>Hello Sunshine 🌞</em></p>
 	  </blockquote>
@@ -72,19 +91,20 @@
 	<p>Well... 🤔</p>
 	<p>Idk to be fair honestly. You decide by yourself. Check out stuff I post in here. Maybe judge from that If i deserved to be subject of your attention or not. </p>
 
+	</div>
       </section>
 
       <!-- ---------- ------
       ---- HiDDEN CODE -----
-      ---- ONLY Real HACKERS 
+      ---- ONLY Real HACKERS
       ---- could FiND -- ---
 
 	<p> This website is databaseless, javascriptless, and buildshit-free, so you can edit your website with a text editor and upload it somewhere like a normal person. <label for="fn1">1</label><input type="checkbox" id="fn1"> <small> This website is based on John Does's Page from <a href="https://john-doe.neocities.org">Neocities</a>.</small> <p>
 
 	<p> I am Still <em>Learning<em> to make a site. </p>
 
-      --- Did you find it? --- 
-      --- OMG You are A ------ 
+      --- Did you find it? ---
+      --- OMG You are A ------
       ----- A Hacker!--- ---->
 
 
@@ -95,19 +115,19 @@
 
       <section id="links">
 
-	<h2>IRC:</h2>
-	<a href="irc://irc.libera.chat/neovoid">#neovoid@libera.chat</a>
+	<div>
+	  <h2>IRC:</h2>
+	  <a href="irc://irc.libera.chat/neovoid">#neovoid@libera.chat</a>
 
-	<h2>MATRIX:</h2>
-        <a href="https://matrix.to/#/@void00r:matrix.org">Matrix</a>
+	  <h2>MATRIX:</h2>
+          <a href="https://matrix.to/#/@void00r:matrix.org">Matrix</a>
 
-	<h2>My OLD Site:</h2>
-        <a href="https://void00r.github.io">My Old site template.</a>
+	  <h2>My OLD Site:</h2>
+          <a href="https://void00r.github.io">My Old site template.</a>
 
-	<h2>My Github:</h2>
-	<a href="https://github.com/void00r"> My Github</a>
-
-
+	  <h2>My Github:</h2>
+	  <a href="https://github.com/void00r"> My Github</a>
+	</div>
 
       </section>
 
@@ -119,16 +139,19 @@
 
         <article>
           <h2>Blogging with Joe Bloggs <time>10.10.2020</time></h2>
+	  <div>
           <p> One <em>could</em> use this setup to write <s>a blog</s> short updates. It's best for text, but for the occasional <a href="#nice-image" title="Tom from Myspace">image</a> the recommendation is to use the <code>loading="lazy"</code> attribute, so images get loaded only when needed:</p>
 
           <textarea id="lazy" readonly rows="1"><img src="image.jpg" loading="lazy"></textarea>net
           <label for="lazy">lazy loading HTML</label>
 
           <p>You might be able to use it for <code>iframe</code> embeds(?), but maybe just write a link to the Youtube video instead.</p>
+	  </div>
         </article>
 
         <article>
           <h2>No-hassle systems for publishing on the web <time>09.20.2020</time></h2>
+	  <div>
           <p>Not everyone knows or wants to write <abbr title="Hypertext Markup Language">HTML</abbr>, so here are some other options where you can write in Markdown:</p>
           <ul>
             <li><a href="https://github.com/bradleytaunt/john-doe-jekyll" target="_blank" rel="noopener">John Doe Jekyll</a> (free) by Bradley Taunt<label for="jekyll">*</label><input type="checkbox" id="jekyll"><small>
@@ -146,8 +169,9 @@
 
         <article>
           <h2><a href="https://html.energy/" target="_blank" rel="noopener"><abbr title="Hypertext Markup Language">HTML</abbr> Energy</a> <time>06.02.2020</time></h2>
+	  <div>
           <figure>
-            <img src="img/star.png" alt="HTML Energy Star" loading="lazy" width="400" height="400">
+            <img src="https://html.energy/images/star.png" alt="HTML Energy Star" loading="lazy" width="400" height="400">
           </figure>
           <blockquote>
             <p><em><abbr title="Hypertext Markup Language">HTML</abbr> energy is all around us and in this very website.<br>
@@ -159,12 +183,14 @@
             Who’s writing <abbr title="Hypertext Markup Language">HTML</abbr> today?</em></p>
           </blockquote>
           <p>Seemed relevant.</p>
+	  </div>
         </article>
 
         <article>
           <h2>Top 3 Headlines of the Decade <time>04.06.2006</time></h2>
+	  <div>
           <figure>
-            <img loading="lazy" alt="" src="img/800x600.png" width="800" height="600">
+            <img loading="lazy" alt="" src="http://0x0.st/oXpi.png" width="800" height="600">
             <figcaption>Placeholder image</figcaption>
           </figure>
           <ol>
@@ -172,11 +198,14 @@
             <li><a href="https://example.com">What Science Says About Productivity</a></li>
             <li><a href="https://example.com">Why Your Cat Bites You</a></li>
           </ol>
+	  </div>
         </article>
 
         <article>
           <h2><a href="https://example.com">Why Your Cat Bites You</a> <time>12.12.2004</time></h2>
+	  <div>
           <p>Honestly you don't want to know.</p>
+	  </div>
         </article>
 
       </section>
