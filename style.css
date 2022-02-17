@@ -41,13 +41,6 @@ header {
   z-index: 2;
 }
 
-header h1 {
-  font-size: 1em;
-  flex: 1; /* pushes nav to the right */
-  white-space: nowrap;
-  padding: 0 5vw .5em 0;
-}
-
 nav a:not(:last-of-type) {
   margin-right: 1.5vw;
 }

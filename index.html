@@ -31,32 +31,54 @@
 
 	  --textcolor: #dadada;
 	  --bgcolor: #0f0d11;
-	  --highlight: #e89b05;
+	  --highlight: #F5DF50;
 
 	}
 
       @media (prefers-color-scheme: dark) {
 	  * {
 	      --textcolor: #dadada;
-	      --bgcolor: #0f0d11; /* #0d0d0f; #141414; */
-	      --highlight: #e89b05; /* #dd61ce #ba4cac; #ffc400; */
+	      --bgcolor: #0b0703; /* #0f0d11 #0d0d0f; #141414; */
+	      --highlight: #F5DF50; /* #dd61ce #ba4cac; #ffc400; */
 	  }
       }
 
+      header h1 {
+	  font-size: 1em;
+	  flex: 1; /* pushes nav to the right */
+	  white-space: nowrap;
+	  padding: 0 5vw .5em 0;
+      }
+
+      neon {
+	  font-size: 1em;
+	  color: #F5DF50;
+	  white-space: nowrap;
+	  flex: 1;
+	  animation: animate 1s ease-in-out infinite alternate;
+      }
+
+      @keyframes animate{
+	  from{
+	      text-shadow: 0 0 20px #F7DA08;
+	  }
+	  to{
+	      text-shadow: 0 0 30px #F7DA08,
+			   0 0 10px #F7DA08;
+	  }
+      }
 
       div {
 	  padding: 30px; 
 	  border:1px solid #f4f222;
       }
+
       div1 {
 	  padding: 10px;
 	  border: 1px solid #16b746;
       }
       p {
 	  color: #16b746;  
-      }
-      h1 {
-	  color: ;
       }
 
     </style>
@@ -66,11 +88,11 @@
   <body>
 
     <header>
-      <h1>
+      <neon>
 	<div1>
         <a href="#home">Neo Void</a>
 	</div1>
-      </h1>
+      </neon>
 
       <div1>
       <nav>
@@ -139,29 +161,54 @@
       --- OMG You are A ------ 
       ----- A Hacker!--- ---->
 
-
-
       <!-- ----------
       ---- Links -----
       ----------- -->
 
       <section id="links">
 
-	<div>
-	  <h2>IRC:</h2>
-	  <a href="irc://irc.libera.chat/neovoid">#neovoid@libera.chat</a>
-
-	  <h2>MATRIX:</h2>
-          <a href="https://matrix.to/#/@void00r:matrix.org">Matrix</a>
-
-	  <h2>My OLD Site:</h2>
-          <a href="https://void00r.github.io">My Old site template.</a>
-
-	  <h2>My Github:</h2>
-	  <a href="https://github.com/void00r"> My Github</a>
-	</div>
-
+	<article>
+	  <h2>Personal Links: </h2> 
+	  <div>
+	    <ul>
+	      <li>IRC: <a href="irc://irc.libera.chat/neovoid">#neovoid@libera.chat</a> </li>
+	      <li>MATRIX: <a href="https://matrix.to/#/@void00r:matrix.org">#void00r:matrix.org</a> </li>
+	      <li>OLD Site: <a href="https://void00r.github.io">voidsoul.github.io</a></li>
+	      <li>Git: <a href="https://github.com/void00r"> void00r</a></li>
+	      <li>Telegram: <a href="https://telegram.me/void00r"> @void00r </a> <label for="mytg">^</label><input type="checkbox" id="mytg"><small>
+		    Yes. Believe or not I still use this %#it.
+		  </small>
+	      </li>
+	    </ul>
+	  </div>
+	</article>
+	       
+	<article>
+	  <h2> 🕸️ WebRing: The Websites of friends I follow. </h2>
+	  <div>
+	    <p> We are connected by sites of similar nature ==> Personal blogs and by common Enthusiasm in <abbr title="Its GNU/Linux Actually!😜">Linux</abbr>.</p>
+	    <ul>
+	      <li><a href="https://harshith.xyz/" target="_blank" rel="noopener">Pystardust </a> Harshith <label for="abouthim">^</label><input type="checkbox" id="abouthim"><small>
+		 Pystar is the genius, shell master, and creator of <a href="https://github.com/pystardust/ytfzf"> ytfzf</a>, <a href="https://github.com/pystardust/waldl"> waldl </a> and <a href="https://github.com/pystardust/ani-cli"> ani-cli </a>.
+	      </small></li>
+	      <li><a href="https://hitarththummar.xyz/" target="_blank" rel="noopener">gtlsgammr</a> Hitarth Thummar</li>
+	      <li><a href="https://bugswriter.com" target="_blank" rel="noopener">bugswriter</a> Suraj Kushwah <label for="youtube">^</label><input type="checkbox" id="youtube"><small>
+		  A Linux Youtuber among us who inspired us (and keep doing so) to learn more about Linux, especially CLI way and scripting. Check out his <a href="https://www.youtube.com/c/BugsWriter0x1337" target="_blank" rel="noopener">youtube </a> channel.
+	      </small></li>
+	      <li><a href="https://aryak.codeberg.page" target="_blank" rel="noopener">aryak</a> Aryak</li>
+	      <li><a href="https://abhishrijoshi.xyz" target="_blank" rel="noopener">Abhi</a> Abhishri</li>
+	      <li><a href="https://relejek.ml" target="_blank" rel="noopener">Relejek</a> Relejek</li>
+	      <li><a href="https://jumpher.github.io/gotakhor" target="_blank" rel="noopener">Ramram</a> gotakhor</li>
+	      <li><a href="https://akshaykp.xyz/" target="_blank" rel="noopener">akshaykp</a> Akshay</li>
+	      <li><a href="https://daksh.codeberg.page/" target="_blank" rel="noopener">daksh</a> Akshay</li>
+	    </ul>
+	    <p> Join our Telegram Group <a href="https://telegram.me/GnuLinuxIndia">GnuLinuxIndia</a> or <a href="https://matrix.to/#/#gnulinuxindia:matrix.org">Matrix room </a> to be the part of the community.</p>
+	    
+	  </div>
+	</article>
+	
       </section>
+      
 
       <!-- ----------
       ---- BLOG -----
@@ -170,7 +217,7 @@
       <section id="blog">
 
         <article>
-          <h2>Blogging with Joe Bloggs <time>10.10.2020</time></h2>
+          <h2><time>10.10.2020</time> Blogging with Joe Bloggs </h2>
 	  <div>
           <p> One <em>could</em> use this setup to write <s>a blog</s> short updates. It's best for text, but for the occasional <a href="#nice-image" title="Tom from Myspace">image</a> the recommendation is to use the <code>loading="lazy"</code> attribute, so images get loaded only when needed:</p>
 
