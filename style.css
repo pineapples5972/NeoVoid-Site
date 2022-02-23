@@ -1,14 +1,3 @@
-body {
-  font-size: 18px;
-  font-family: system-ui, sans-serif;
-  line-height: 1.4;
-  color: var(--textcolor);
-  background: var(--bgcolor);
-  position: relative;
-  max-width: 64em;  /* remove this for a full-width layout */
-  margin: 0 auto;  /* centers the layout */
-}
-
 /* ------- Sections ------- */
 
 section {
