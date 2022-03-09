@@ -41,18 +41,9 @@ a {
   color: var(--highlight);
 }
 
-a:hover {
-  border-bottom: 1px solid;
-}
-
 section h1 {
   font-size: 1em;
   margin: 0 0 1em 0;
-}
-
-p, ul, ol, article {
-  max-width: 60ch; /* Limit line-length to 60 characters */
-  margin-bottom: .6em;
 }
 
 ul {

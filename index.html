@@ -1,4 +1,4 @@
-<!-- LAST UPDATED -- Thu Feb 24 09:30:53 PM IST 2022 -->
+<!-- LAST UPDATED -- Wed Mar  9 09:38:44 PM IST 2022 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +50,6 @@
       }
       
       body {
-          font-size: 17px; 
           font-family: JetBrains Mono, system-ui, sans-serif;
           line-height: 1.4;
           color: var(--textcolor);
@@ -67,9 +66,9 @@
 	  margin: 1.6em 0 .6em 0;
       }
 
-      article h2 {
-	  font-weight: 700;
-	  margin: 0 0 1em 0;
+      p, ul, ol, article {
+	  max-width: 60ch; /* Limit line-length to 60 characters */
+	  margin-bottom: .6em;
       }
 
 
@@ -133,14 +132,29 @@
       }
 
       code, textarea {
-	  font-family: JetBrains Mono, ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+	  font-family: JetBrains Mono, monospace;
 	  font-size: 1em;
 	  opacity: .7;
 	  color: #16b746;  
       }
-    </style>
 
+      a:hover {
+	  border-bottom: 1px solid;
+	  border-top: 1px solid;
+      }
+
+      footer {
+	  position: sticky;
+	  white-space: nowrap;
+	  background-color: var(--bgcolor);
+	  padding: 10px;
+	  text-align: left;
+	  color: var(--textcolor);
+      }
+
+    </style>
   </head>
+
   <body>
 
     <header>
@@ -149,7 +163,7 @@
           <a href="#home">NE0xV0iD ></a>​
 	</span>
       </neon>
-
+      
       <edges>
       <nav>
         <a href="#links">Links</a>
@@ -160,42 +174,39 @@
       </edges>
 
     </header>
-
+    
     <main>
-
+      
       <!-- ----------
       ---- Home -----
       ----------- -->
 
       <section id="home">
 
-	<!---
-	<div style="position:relative; left:10px; top:100px;">
-	  <figure>
-	    <iframe loading="lazy" src="https://tixy.land/?code=-.4%2F%28(hypot%28x-t%2510%2Cy-t%258%29-t%252*9%29)" width="500px" height="400px"></iframe>
-	    <figcaption>A little something to play with site. Never mind it.</figcaption>
-	  </figure>
-        </div>
-        --->
-	
 	  <blockquote>
 	    <p style="color:#f4f222"><em>Hello Sunshine 🍍</em></p>
 	  </blockquote>
 
-	<div>
-	  <h2 style="color:#f4f222">Hi there!</h2> 
-	  <code> ♂ Neo Void | 24 | Marathi </code>
-	  <h2 style="color:#f4f222"><b> I love Linux. 🐧</b></h2>
-	  <code> Artix | DWM | ST | EMACS+VIM </code> 
-	  <h2 style="color:#f4f222"><b> Likes..</b> </h2>
-	  <code>
-	    Read | Flix | Think 
-	    Philosophy | Psychology | Computers 
-	    Privacy | CopyLeft | OpenSource
-	  </code>
-	</div>
+          <article>
+	    <div>
+	      <h2 style="color:#f4f222">Hi there!</h2>  
+	      <code>♂ Neo Void | 24 | Marathi </code> 
+	      
+	      <h2 style="color:#f4f222">I love Linux. 🐧</h2>
+	      <code>Artix | DWM | ST | EMACS+VIM </code>
+	      
+	      <h2 style="color:#f4f222"> Likes.. </h2>
+	      <code> Reads | Flix | Thinks <br>
+		Philosophy | Psychology | Computers <br>
+		Privacy | CopyLeft | OpenSource </code>
+	    </div>
+
+          </article>
+
+	  
+
       </section>
-      
+
       <!-- ---------- ------
       ---- HiDDEN CODE -----
       ---- ONLY Real HACKERS 
@@ -392,5 +403,9 @@
 
     <a href="#blog" class="lightbox" id="nice-image"><img loading="lazy" alt="Oh my Friend Ganesha" src="img/gnes.png"></a>
 
-  </body>
+    <footer>
+      <script type="text/javascript" src="//counter.websiteout.net/js/2/10/0/1"></script>
+    </footer>
+    
+ </body>
 </html>
