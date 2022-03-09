@@ -43,7 +43,28 @@
 	      --highlight: #F5DF50; /* #dd61ce #ba4cac; #ffc400; */
 	  }
       }
-
+      /* ------- Sections ------- */
+      
+      section {
+	  padding: calc(6em + 5vw) 5vw 8vw 5vw;
+	  /* ! Everything below is needed ! */
+	  display: none; 
+	  position: absolute;
+	  top: 0;
+	  min-height: 100vh;
+	  width: 100%;
+	  background: var(--bgcolor);
+      }
+      
+      section:target { /* Show section */
+	  display: block;
+      }
+      
+      section#home { /* Show #home by default */
+	  display: block;
+      }
+      
+      
       @font-face {
 	  font-family: JetBrains Mono;
 	  src: url(fonts/JetBrainsMono-Regular.woff2)
@@ -144,12 +165,53 @@
       }
 
       footer {
-	  position: sticky;
-	  white-space: nowrap;
+	  position: fixed;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  height: auto;
+	  width: 100vw;
 	  background-color: var(--bgcolor);
-	  padding: 10px;
-	  text-align: left;
 	  color: var(--textcolor);
+      }
+
+      .footer-content{
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  flex-direction: column;
+	  text-align: center;
+      }
+
+      .footer-content h3{
+	  font-size: 1.8rem;
+	  font-weight: 400;
+	  text-transforms: capitalize;
+	  line-height: 3rem;
+      }
+
+      .footer content p{
+	  max-width: 500px;
+	  margin: 10px auto;
+	  line-height: 28px;
+	  font-size: 14px;
+      }
+
+      .footer-bottom{
+	  background: #000;
+	  width: 100vw;
+	  padding: 10px 0;
+	  text-align: center;
+      }
+
+      .footer-bottom p {
+	  font-size: 14px;
+	  word-spacing: 2px;
+      }
+
+      .footer-bottom-span{
+	  opacity: .4;
+	  font-weight: 200;
       }
 
     </style>
@@ -183,6 +245,7 @@
 
       <section id="home">
 
+	
 	  <blockquote>
 	    <p style="color:#f4f222"><em>Hello Sunshine 🍍</em></p>
 	  </blockquote>
@@ -404,8 +467,12 @@
     <a href="#blog" class="lightbox" id="nice-image"><img loading="lazy" alt="Oh my Friend Ganesha" src="img/gnes.png"></a>
 
     <footer>
-      <script type="text/javascript" src="//counter.websiteout.net/js/2/10/0/1"></script>
-    </footer>
+
+      <div class="footer-content"
+	   <p> VISITS </p>
+	   <script type="text/javascript" src="//counter.websiteout.net/js/2/10/0/1"></script> 
+</div>
+</footer>
     
  </body>
 </html>
