@@ -11,13 +11,13 @@
 
     <!-- Recommended minimum -->
     <meta property="og:title" content="Neo Void">
-    <meta property="og:description" content="Filling the Void of his Soul.👻">
-    <!-- meta property="og:image" content="noimageyet.png" -->
+    <meta property="og:description" content="Void Filled with Neons.">
+    <meta property="og:image" content="/gl/pi.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- You could also inline the stylesheet -->
     <link rel="stylesheet" href="style.css">
-    - foreground
+    <!-- foreground -->
     <!-- old colors 
     #4CAF50
     #FFEE05
@@ -45,7 +45,7 @@
 
       body {
           font-size: 17px; 
-          font-family: system-ui, sans-serif;
+          font-family: JetBrains Mono Light, system-ui, sans-serif;
           line-height: 1.4;
           color: var(--textcolor);
           background: var(--bgcolor);
@@ -54,6 +54,17 @@
           margin: 0 auto;  /* centers the layout */
       }
 
+
+      h2, h3, h4 {
+	  font-size: 1em;
+	  font-weight: 600;
+	  margin: 1.6em 0 .6em 0;
+      }
+
+      article h2 {
+	  font-weight: 700;
+	  margin: 0 0 1em 0;
+      }
 
 
       header h1 {
@@ -71,15 +82,36 @@
 	  animation: animate 1s ease-in-out infinite alternate;
       }
 
-      @keyframes animate{
-	  from{
-	      text-shadow: 0 0 10px #F7DA08;
+       @keyframes animate{
+	   from{
+	       text-shadow: 0 0 10px #F7DA08;
 	  }
-	  to{
-	      text-shadow: 0 0 20px #F7DA08,
-			   0 0 5px #F7DA08;
-	  }
+	   to{
+	       text-shadow: 0 0 20px #F7DA08,
+			    0 0 5px #F7DA08;
+	   }
       }
+
+
+       .box a::after {
+	   content: " _";
+	   width: 0px;
+	   height: 0px;
+	   background: #f4f222;
+	   display: inline-block;
+       }
+
+       @keyframes cursor-blink {
+	   0% {
+	       opacity: 0;
+	   }
+       }
+
+       .box a::after {
+	   /*code commented for brevity*/
+	   animation: cursor-blink 1.5s steps(2) infinite;
+       }
+
 
       div {
 	  padding: 30px; 
@@ -95,6 +127,13 @@
 	  color: #16b746;  
       }
 
+      code, textarea {
+	  font-family: JetBrains Mono, ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+	  font-size: 1em;
+	  opacity: .7;
+	  color: #16b746;  
+	  white-space: nowrap;
+      }
     </style>
 
   </head>
@@ -102,7 +141,9 @@
 
     <header>
       <neon>
-        <a href="#home">Neo Void</a>
+	<span class="box">
+          <a href="#home">NE0xV0iD ></a>​
+	</span>
       </neon>
 
       <edges>
@@ -135,29 +176,23 @@
 	
 	<div>
 	  <blockquote>
-	    <p style="color:#f4f222"><em>Hello Sunshine 🌞</em></p>
+	    <p style="color:#f4f222"><em>Hello Sunshine 🍍</em></p>
 	  </blockquote>
 
-
-	<h2 style="color:#f4f222">Hi there!</h2>
-	<p> I am 'NeoVoid' also known as Twilight, VoidSoul, Void00r and what not. </p>
-	<p> I have been using Linux for almost three years now and still I havent learned much.
-	  The thing about IT world is you never stop learning especially with linux.
-	  Because every year new stuff get invented, new programs get written, old ones get rewritten and new conventions take place of old ones and also old ones being preserved and even prefered more compared to the new ones. </p>
-
-	<p style="color:#f4f222"><b> I love Linux. 🐧</b></p>
-
-	 <p> Its my passion now. To learn, explore and tell the world what i found.
-	  I never thought I'd be having my own site. As a introvert its not easy for people like me to put themself into public. Because we techys are mostly shy creatures. Still there are lots among us who conquered this fear and doing a good favour for outside world. Most of the digital world owes them in fact.</p>
-
-	<p> Alright enought banter. Now the question is...</p>
-	<p style="color:#f4f222"><b>Who Am I? </b> Does it matter?</p>
-	<p>Well... 🤔</p>
-	<p>Idk to be fair honestly. You decide by yourself. Check out stuff I post in here. Maybe judge from that If i deserved to be subject of your attention or not. </p>
-
+	  <h2 style="color:#f4f222">Hi there!</h2> 
+	  <code> ♂ Neo Void | uptime 24yr | MH32 | Single </code>
+	  <h2 style="color:#f4f222"><b> I love Linux. 🐧</b></h2>
+	  <code> Artix | DWM | ST | EMACS+VIM </code> 
+	  <h2 style="color:#f4f222"><b> Likes..</b> </h2>
+	  <code>
+	    Read | Flix | Think <br>
+	    Philosophy | Psychology | Computers <br>
+	    Privacy | CopyLeft | OpenSource
+	  </code>
+	  
 	</div>
       </section>
-
+      
       <!-- ---------- ------
       ---- HiDDEN CODE -----
       ---- ONLY Real HACKERS 
@@ -224,74 +259,21 @@
       <section id="blog">
 	
         <article>
-          <h2><time>10.10.2020</time> Blogging with Joe Bloggs </h2>
+          <h2><time>05.03.2022</time> Shri Ganesha of Blogging.</h2>
 	  <div>
-	    <p> One <em>could</em> use this setup to write <s>a blog</s> short updates. It's best for text, but for the occasional <a href="#nice-image" title="Tom from Myspace">image</a> the recommendation is to use the <code>loading="lazy"</code> attribute, so images get loaded only when needed:</p>
-	    
-            <textarea id="lazy" readonly rows="1"><img src="image.jpg" loading="lazy"></textarea>net
-            <label for="lazy">lazy loading HTML</label>
-	    
-            <p>You might be able to use it for <code>iframe</code> embeds(?), but maybe just write a link to the Youtube video instead.</p>
-	  </div>
-	</article>
-	
-        <article>
-          <h2><time>09.20.2020</time> No-hassle systems for publishing on the web </h2>
-	  <div>
-            <p>Not everyone knows or wants to write <abbr title="Hypertext Markup Language">HTML</abbr>, so here are some other options where you can write in Markdown:</p>
-            <ul>
-	      <li><a href="https://github.com/bradleytaunt/john-doe-jekyll" target="_blank" rel="noopener">John Doe Jekyll</a> (free) by Bradley Taunt<label for="jekyll">*</label><input type="checkbox" id="jekyll"><small>
-		  This very template, ported to Jekyll. Ideal if you are planning to blog and use Github to update your website.
-	      </small></li>
-		<li><a href="https://github.com/cadars/portable-php" target="_blank" rel="noopener">portable-php</a> (free) by Gregory Cadars</li>
-	      <li><a href="https://github.com/josephernest/void" target="_blank" rel="noopener">Void</a> (free) by Joseph Ernest<label for="bloggggg">*</label><input type="checkbox" id="bloggggg"><small>
-		  Also check <a href="https://github.com/josephernest/bloggggg" target="_blank" rel="noopener">bloggggg</a> by the same author.
-	      </small></li>
-	      <li><a href="https://datenstrom.se/yellow/" target="_blank" rel="noopener">Yellow</a> (free) by Datenstrom</li>
-	      <li><a href="https://getkirby.com" target="_blank" rel="noopener">Kirby</a> (not free) by Bastian Allgeier GmbH</li>
-            </ul>
-            <p>All of these use flat files for content, so they don’t need a database; meaning less trouble to install, backup, transfer, or fix your website.</p>
-	  </div>
-        </article>
-	
-        <article>
-          <h2><time>06.02.2020</time> <a href="https://html.energy/" target="_blank" rel="noopener"><abbr title="Hypertext Markup Language">HTML</abbr> Energy</a></h2>
-	    <div>
-              <figure>
-		<img src="https://html.energy/images/star.png" alt="HTML Energy Star" loading="lazy" width="400" height="400">
-              </figure>
-              <blockquote>
-		<p><em><abbr title="Hypertext Markup Language">HTML</abbr> energy is all around us and in this very website.<br>
-		    Building websites has become complex, but the energy of <abbr title="Hypertext Markup Language">HTML</abbr> persists.<br>
-		    What makes <abbr title="Hypertext Markup Language">HTML</abbr> special is its simplicity.<br>
-		    <abbr title="Hypertext Markup Language">HTML</abbr> isn’t a vast language, yet you can do a lot with it.<br>
-		    Anyone who wants to publish on the web can write <abbr title="Hypertext Markup Language">HTML</abbr>.<br>
-		    This accessibility and ease of use is where its energy resides.<br>
-		    Who’s writing <abbr title="Hypertext Markup Language">HTML</abbr> today?</em></p>
-              </blockquote>
-              <p>Seemed relevant.</p>
-	    </div>
-        </article>
-	
-        <article>
-          <h2><time>04.06.2006</time> Top 3 Headlines of the Decade </h2>
-	  <div>
+            First Blog! 
             <figure>
-	      <img loading="lazy" alt="" src="http://0x0.st/oXpi.png" width="800" height="600">
-	      <figcaption>Placeholder image</figcaption>
+              <img loading="lazy" alt="Shri Ganesha" src="/img/gnes.png" width="299" height="230">
             </figure>
-            <ol>
-	      <li><a href="https://example.com/pdf.pdf">The Complete Insider’s Guide to Penny Stocks</a></li>
-	      <li><a href="https://example.com">What Science Says About Productivity</a></li>
-	      <li><a href="https://example.com">Why Your Cat Bites You</a></li>
-            </ol>
-	  </div>
-        </article>
-	
-        <article>
-          <h2><time>12.12.2004</time> <a href="https://example.com">Why Your Cat Bites You</a> </h2>
-	  <div>
-            <p>Honestly you don't want to know.</p>
+	    
+            <blockquote>
+	      <p style="color:#16b746"><em>Life gives lemons. </em> </p>
+
+	      <p style="color:#16b746"><em>It is the thou art of juice making that defines thou lemonade's taste. </em> </p>
+	      
+	      <p style="color:#f4f222"><em>- The guy who loves pineapples. </em></p>
+	    </blockquote>
+	    
 	  </div>
 	</article>
 	
@@ -303,7 +285,7 @@
 
       <section id="photos">
 
-        <p>An example of a photo gallery with a <abbr title="Cascading Style Sheets">CSS</abbr>-only lightbox.</p>
+        <p>My Gallery</p>
 
         <!-- You can use this grid of images in any page -->
 
@@ -320,9 +302,12 @@
           <a href="#img-10"><img loading="lazy" alt="" src="gl/we.jpg"></a>
           <a href="#img-11"><img loading="lazy" alt="" src="gl/mo.jpg"></a>
           <a href="#img-12"><img loading="lazy" alt="" src="gl/bk.jpg"></a>
-          <a href="#img-13"><img loading="lazy" alt="" src="gl/cv.jpg"></a>
+          <a href="#img-13"><img loading="lazy" alt="" src="gl/bq.jpg"></a>
           <a href="#img-14"><img loading="lazy" alt="" src="gl/sp.jpg"></a>
           <a href="#img-15"><img loading="lazy" alt="" src="gl/ch.png"></a>
+          <a href="#img-16"><img loading="lazy" alt="" src="gl/pi.jpg"></a>
+          <a href="#img-18"><img loading="lazy" alt="" src="gl/ol.png"></a>
+          <a href="#img-19"><img loading="lazy" alt="" src="gl/ct.jpg"></a>
         </div>
 
       </section>
@@ -392,13 +377,17 @@
     <a href="#photos" class="lightbox" id="img-10"><img loading="lazy" alt="" src="gl/we.jpg"></a>
     <a href="#photos" class="lightbox" id="img-11"><img loading="lazy" alt="" src="gl/mo.jpg"></a>
     <a href="#photos" class="lightbox" id="img-12"><img loading="lazy" alt="" src="gl/bk.jpg"></a>
-    <a href="#photos" class="lightbox" id="img-13"><img loading="lazy" alt="" src="gl/cv.jpg"></a>
+    <a href="#photos" class="lightbox" id="img-13"><img loading="lazy" alt="" src="gl/bq.jpg"></a>
     <a href="#photos" class="lightbox" id="img-14"><img loading="lazy" alt="" src="gl/sp.jpg"></a>
     <a href="#photos" class="lightbox" id="img-15"><img loading="lazy" alt="" src="gl/ch.png"></a>
+    <a href="#photos" class="lightbox" id="img-16"><img loading="lazy" alt="" src="gl/pi.jpg"></a>
+    <a href="#photos" class="lightbox" id="img-17"><img loading="lazy" alt="" src="gl/qt.jpg"></a>
+    <a href="#photos" class="lightbox" id="img-18"><img loading="lazy" alt="" src="gl/ol.png"></a>
+    <a href="#photos" class="lightbox" id="img-19"><img loading="lazy" alt="" src="gl/ct.jpg"></a>
 
     <!-- Other images -->
 
-    <a href="#blog" class="lightbox" id="nice-image"><img loading="lazy" alt="Tom from Myspace" src="img/tom.jpg"></a>
+    <a href="#blog" class="lightbox" id="nice-image"><img loading="lazy" alt="Oh my Friend Ganesha" src="img/gnes.png"></a>
 
   </body>
 </html>

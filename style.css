@@ -50,12 +50,6 @@ section h1 {
   margin: 0 0 1em 0;
 }
 
-h2, h3, h4 {
-  font-size: 1em;
-  font-weight: 600;
-  margin: 1.6em 0 .6em 0;
-}
-
 p, ul, ol, article {
   max-width: 60ch; /* Limit line-length to 60 characters */
   margin-bottom: .6em;
@@ -127,11 +121,7 @@ img, svg, video, audio {
   fill: currentColor;
 }
 
-code, textarea {
-  font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
-  font-size: 1em;
-  opacity: .7;
-}
+
 
 a code {
   opacity:1;
@@ -253,11 +243,6 @@ a[href$=".png"]:before { content: "IMG"; }
 
 article + article {
   margin-top: 4.5em;
-}
-
-article h2 {
-  font-weight: 700;
-  margin: 0 0 1em 0;
 }
 
 article time {
