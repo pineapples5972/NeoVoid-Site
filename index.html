@@ -17,6 +17,9 @@
 
     <!-- You could also inline the stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- special font for special quotes-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora&family=Marck+Script&family=Rye&display=swap">
     <!-- foreground -->
     <!-- old colors 
     #4CAF50
@@ -26,8 +29,9 @@
     -->
 
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box;
 
+      * { margin: 0; padding: 0; box-sizing: border-box;
+	  
 	  /* Color scheme */
 
 	  --textcolor: #dadada;
@@ -67,9 +71,9 @@
       
       @font-face {
 	  font-family: JetBrains Mono;
-	  src: url(fonts/JetBrainsMono-Regular.woff2)
+	  src: url(fonts/JetBrainsMono-Regular.woff2);
       }
-      
+
       body {
           font-family: JetBrains Mono, system-ui, sans-serif;
           line-height: 1.4;
@@ -164,57 +168,22 @@
 	  border-top: 1px solid;
       }
 
-      footer {
-	  position: fixed;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
-	  height: auto;
-	  width: 100vw;
-	  background-color: var(--bgcolor);
+      aside {
+	  width: 30%;
+	  padding: 10px;
+	  border:1px solid #16b746;
+	  float: right;
 	  color: var(--textcolor);
+	  background: var(--bgcolor);
       }
 
-      .footer-content{
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  flex-direction: column;
-	  text-align: center;
+      special-quote {
+	  font-family: 'Marck Script', cursive;
+	  line-height: 1.5em;
+	  font-size: 150%;
       }
-
-      .footer-content h3{
-	  font-size: 1.8rem;
-	  font-weight: 400;
-	  text-transforms: capitalize;
-	  line-height: 3rem;
-      }
-
-      .footer content p{
-	  max-width: 500px;
-	  margin: 10px auto;
-	  line-height: 28px;
-	  font-size: 14px;
-      }
-
-      .footer-bottom{
-	  background: #000;
-	  width: 100vw;
-	  padding: 10px 0;
-	  text-align: center;
-      }
-
-      .footer-bottom p {
-	  font-size: 14px;
-	  word-spacing: 2px;
-      }
-
-      .footer-bottom-span{
-	  opacity: .4;
-	  font-weight: 200;
-      }
-
     </style>
+
   </head>
 
   <body>
@@ -225,7 +194,7 @@
           <a href="#home">NE0xV0iD ></a>​
 	</span>
       </neon>
-      
+
       <edges>
       <nav>
         <a href="#links">Links</a>
@@ -247,13 +216,19 @@
 
 	
 	  <blockquote>
-	    <p style="color:#f4f222"><em>Hello Sunshine 🍍</em></p>
+	    <p style="color:#f4f222"> <em>Hello Sunshine</em> &#x1F34D; </p>
 	  </blockquote>
 
+	  <aside>
+	    <figure>
+              <img loading="lazy" alt="🍍" src="gl/pi.jpg" width="299" height="230">
+	    </figure>
+	  </aside>
+	  
           <article>
 	    <div>
 	      <h2 style="color:#f4f222">Hi there!</h2>  
-	      <code>♂ Neo Void | 24 | Marathi </code> 
+	      <code>♂ Neo Void | 24 | मराठी </code> 
 	      
 	      <h2 style="color:#f4f222">I love Linux. 🐧</h2>
 	      <code>Artix | DWM | ST | EMACS+VIM </code>
@@ -266,15 +241,28 @@
 
           </article>
 
-	  
+	  <aside> 
+	    <special-quote>
+	      ❝ Life main tante ho rakhe hai....! ❞ 
+	    </special-quote>
+	  </aside>
+
+	  <p> ---xoxo----<p>
+
+	  <article>
+	    <div style="padding: 10px">
+	      <p> VISITS </p>
+	      <script type="text/javascript" src="//counter.websiteout.net/js/2/10/0/1"></script> 
+	    </div>
+	  </article>
 
       </section>
-
+      
       <!-- ---------- ------
       ---- HiDDEN CODE -----
       ---- ONLY Real HACKERS 
       ---- could FiND -- ---
-	<p> This website is databaseless, javascriptless, and buildshit-free, so you can edit your website with a text editor and upload it somewhere like a normal person. <label for="fn1">1</label><input type="checkbox" id="fn1"> <small> This website is based on John Does's Page from <a href="https://john-doe.neocities.org">Neocities</a>.</small> <p>
+	<p> This website is databaseless, javascriptless, and buildshit-free, so you can edit your website with a text editor and upload it somewhere like a normal person. <label for="fn1">1</label><input type="checkbox" id="fn1"> <small> This website is based on John Does's Page from <a href="https://john-doe.neocities.org" target="_blank" rel="noopener noreferrer">Neocities</a>.</small> <p>
 	<p> I am Still <em>Learning<em> to make a site. </p>
       --- Did you find it? --- 
       --- OMG You are A ------ 
@@ -290,11 +278,11 @@
 	  <h2>🤵 Personal Links: </h2> 
 	  <div>
 	    <ul>
-	      <li>IRC: <a href="irc://irc.libera.chat/neovoid">#neovoid@libera.chat</a> </li>
-	      <li>MATRIX: <a href="https://matrix.to/#/@void00r:matrix.org">#void00r:matrix.org</a> </li>
-	      <li>OLD Site: <a href="https://void00r.github.io">voidsoul.github.io</a></li>
-	      <li>Git: <a href="https://github.com/void00r"> void00r</a></li>
-	      <li>Telegram: <a href="https://telegram.me/void00r"> @void00r </a> <label for="mytg">^</label><input type="checkbox" id="mytg"><small>
+	      <li>IRC: <a href="irc://irc.libera.chat/neovoid" target="_blank" rel="noopener noreferrer">#neovoid@libera.chat</a> </li>
+	      <li>MATRIX: <a href="https://matrix.to/#/@void00r:matrix.org" target="_blank" rel="noopener noreferrer">#void00r:matrix.org</a> </li>
+	      <li>OLD Site: <a href="https://void00r.github.io" target="_blank" rel="noopener noreferrer">voidsoul.github.io</a></li>
+	      <li>Git: <a href="https://github.com/void00r" target="_blank" rel="noopener noreferrer"> void00r</a></li>
+	      <li>Telegram: <a href="https://telegram.me/void00r" target="_blank" rel="noopener noreferrer"> @void00r </a> <label for="mytg">^</label><input type="checkbox" id="mytg"><small>
 		    Yes. Believe or not I still use this %#it.
 		  </small>
 	      </li>
@@ -308,20 +296,18 @@
 	    <p> We are connected by sites of similar nature ==> Personal blogs and by common Enthusiasm in <abbr title="Its GNU/Linux Actually!😜">Linux</abbr>.</p>
 	    <ul>
 	      <li><a href="https://harshith.xyz/" target="_blank" rel="noopener">Pystardust </a> Harshith <label for="abouthim">^</label><input type="checkbox" id="abouthim"><small>
-		 Pystar is the genius, shell master, and creator of <a href="https://github.com/pystardust/ytfzf"> ytfzf</a>, <a href="https://github.com/pystardust/waldl"> waldl </a> and <a href="https://github.com/pystardust/ani-cli"> ani-cli </a>.
+		 Pystar is the genius, shell master, and creator of <a href="https://github.com/pystardust/ytfzf" target="_blank" rel="noopener noreferrer"> ytfzf</a>, <a href="https://github.com/pystardust/waldl" target="_blank" rel="noopener noreferrer"> waldl </a> and <a href="https://github.com/pystardust/ani-cli" target="_blank" rel="noopener noreferrer"> ani-cli </a>.
 	      </small></li>
 	      <li><a href="https://hitarththummar.xyz/" target="_blank" rel="noopener">gtlsgamr</a> Hitarth Thummar</li>
 	      <li><a href="https://bugswriter.com" target="_blank" rel="noopener">bugswriter</a> Suraj Kushwah <label for="youtube">^</label><input type="checkbox" id="youtube"><small>
-		  A Linux Youtuber among us who inspired us (and keep doing so) to learn more about Linux, especially CLI way and scripting. He is a creater of legendary <a href="https://github.com/bugswriter/tuxi">tuxi</a> and <a href="https://github.com/bugswriter/notflix">notflix</a>. Also Check out his <a href="https://www.youtube.com/c/BugsWriter0x1337" target="_blank" rel="noopener">youtube </a> channel for linux goodies.
+		  A Linux Youtuber among us who inspired us (and keep doing so) to learn more about Linux, especially CLI way and scripting. He is a creater of legendary <a href="https://github.com/bugswriter/tuxi" target="_blank" rel="noopener noreferrer">tuxi</a> and <a href="https://github.com/bugswriter/notflix" target="_blank" rel="noopener noreferrer">notflix</a>. Also Check out his <a href="https://www.youtube.com/c/BugsWriter0x1337" target="_blank" rel="noopener">youtube </a> channel for linux goodies.
 	      </small></li>
 	      <li><a href="https://aryak.codeberg.page" target="_blank" rel="noopener">aryak</a> Aryak</li>
 	      <li><a href="https://abhishrijoshi.xyz" target="_blank" rel="noopener">Abhi</a> Abhishri</li>
 	      <li><a href="https://relejek.ml" target="_blank" rel="noopener">Relejek</a> Relejek</li>
 	      <li><a href="https://jumpher.github.io/gotakhor" target="_blank" rel="noopener">Ramram</a> gotakhor</li>
-	      <li><a href="https://akshaykp.xyz/" target="_blank" rel="noopener">akshaykp</a> Akshay</li>
-	      <li><a href="https://daksh.codeberg.page/" target="_blank" rel="noopener">daksh</a> Daksh</li>
 	    </ul>
-	    <p> Be the part of <a href="https://gnulinuxindia.org/">https://gnulinuxindia.org</a> Join our Telegram Group <a href="https://telegram.me/GnuLinuxIndia">GnuLinuxIndia</a> or <a href="https://matrix.to/#/#gnulinuxindia:matrix.org">Matrix room </a> or <a href="irc://irc.libera.chat/gnulinuxindia">IRC</a> to be the part of the community.</p>
+	    <p> Be the part of <a href="https://gnulinuxindia.org/" target="_blank" rel="noopener">https://gnulinuxindia.org</a> Join our Telegram Group <a href="https://telegram.me/GnuLinuxIndia" target="_blank" rel="noopener">GnuLinuxIndia</a> or <a href="https://matrix.to/#/#gnulinuxindia:matrix.org" target="_blank" rel="noopener">Matrix room </a> or <a href="irc://irc.libera.chat/gnulinuxindia" target="_blank" rel="noopener">IRC</a> to be the part of the community.</p>
 	    
 	  </div>
 	</article>
@@ -465,14 +451,6 @@
     <!-- Other images -->
 
     <a href="#blog" class="lightbox" id="nice-image"><img loading="lazy" alt="Oh my Friend Ganesha" src="img/gnes.png"></a>
-
-    <footer>
-
-      <div class="footer-content"
-	   <p> VISITS </p>
-	   <script type="text/javascript" src="//counter.websiteout.net/js/2/10/0/1"></script> 
-</div>
-</footer>
     
  </body>
 </html>
