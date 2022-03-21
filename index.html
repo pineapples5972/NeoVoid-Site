@@ -1,4 +1,4 @@
-<!-- LAST UPDATED -- Wed Mar 16 12:10:16 AM IST 2022 -->
+<!-- LAST UPDATED -- Mon Mar 21 01:24:34 PM IST 2022 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,23 +40,30 @@
 
     <style>
 
+      @media (prefers-color-scheme: dark) {
+	  * {
+	      --textcolor: var(--textcolor);
+	      --bgcolor: var(--bgcolor); /* #0b0703; #0f0d11 #0d0d0f; #141414; */
+	      --highlight: var(--highlight); /* #dd61ce #ba4cac; #ffc400; */
+	  }
+      }
+
       * { margin: 0; padding: 0; box-sizing: border-box;
 	  
 	  /* Color scheme */
 
-	  --textcolor: #dadada;
-	  --bgcolor: #0f0d11;
-	  --highlight: #F5DF50;
-
+	  --textcolor: #fcfbf9; /*#dadada;*/
+	  --bgcolor: #040304;     /* #0f0d11; */
+	  --highlight: #f4f222;  /* #F5DF50; */
+	  --neoncolor: #F5DF50;
+	  --hovercolor: #FFcf33;
+	  --shadowcolor: #F7DA08; /* animation */
+	  --greencolor: #3EE77B;  /* #16b746; code #53fc5e */
+	  --extracolor: #f99509;  /*#ff60ca; */
+	  --extralightcolor: #E49200; /*#7f236e;*/
 	}
 
-      @media (prefers-color-scheme: dark) {
-	  * {
-	      --textcolor: #dadada;
-	      --bgcolor: #0b0703; /* #0f0d11 #0d0d0f; #141414; */
-	      --highlight: #F5DF50; /* #dd61ce #ba4cac; #ffc400; */
-	  }
-      }
+      
       /* ------- Sections ------- */
       
       section {
@@ -95,7 +102,6 @@
           margin: 0 auto;  /* centers the layout */
       }
 
-
       h2, h3, h4 {
 	  font-size: 1em;
 	  font-weight: 600;
@@ -119,17 +125,17 @@
 	  font-size: 2em;
 	  flex: 1;
 	  white-space: nowrap;
-	  color: #F5DF50;
+	  color: var(--neoncolor);
 	  animation: animate 1s ease-in-out infinite alternate;
       }
 
        @keyframes animate{
 	   from{
-	       text-shadow: 0 0 10px #F7DA08;
+	       text-shadow: 0 0 10px var(--shadowcolor);
 	  }
 	   to{
-	       text-shadow: 0 0 20px #F7DA08,
-			    0 0 5px #F7DA08;
+	       text-shadow: 0 0 20px var(--shadowcolor),
+			    0 0 5px var(--shadowcolor);
 	   }
       }
 
@@ -137,7 +143,7 @@
 	   content: " _";
 	   width: 0px;
 	   height: 0px;
-	   background: #f4f222;
+	   background: var(--highlight);
 	   display: inline-block;
        }
 
@@ -153,23 +159,23 @@
 
       div {
 	  padding: 30px; 
-	  border:1px solid #f4f222;
+	  border:1px solid var(--highlight);
       }
 
       edges {
 	  padding: 1vw;
-	  border: 1px solid #16b746;
+	  border: 1px solid var(--greencolor);
       }
 
       p {
-	  color: #16b746;  
+	  color: var(--greencolor);  
       }
 
       code, textarea {
 	  font-family: JetBrains Mono, monospace;
 	  font-size: 1em;
 	  opacity: 30;
-	  color: #53fc5e;  
+	  color: var(--greencolor);  
       }
 
       a:hover {
@@ -180,7 +186,7 @@
       aside {
 	  width: 30%;
 	  padding: 10px;
-	  border: 1px solid #16b746;
+	  border: 1px solid var(--greencolor);
 	  float: right;
 	  color: var(--textcolor);
 	  background: var(--bgcolor);
@@ -190,8 +196,9 @@
 	  width: 30%;
 	  font-family: 'Marck Script', cursive;
 	  font-size: 130%;
-	  color: #ff60ca;
+	  color: var(--extracolor);
       }
+
     </style>
 
   </head>
@@ -226,10 +233,10 @@
       <section id="home">
 	
 	  <blockquote style="opacity: 100">
-	    <p style="color:#f4f222" font-family="Twemoji"> <em>Hello Sunshine!</em> 🌞 </p>
+	    <p style="color:var(--highlight)" font-family="Twemoji"> 🎃 <em>You are in my personal space beware of things you cant see here.</em></p>
 	  </blockquote>
 
-	  <aside style="border: 1px solid #f4f222;">
+	  <aside style="border: 1px solid var(--highlight);">
 	    <figure>
               <img loading="lazy" alt="🍍" src="img/pitr.png" width="299" height="230">
 	    </figure>
@@ -237,13 +244,13 @@
 	  
           <article>
 	    <div>
-	      <h2 style="color:#f4f222">Hi there!</h2>  
-	      <code>♂ Neo Void | 24 | मराठी </code> 
+	      <h2 style="color:var(--highlight)">Hi there!</h2>  
+	      <code> I am Neo Void. </code> 
 	      
-	      <h2 style="color:#f4f222" font-family="Twemoji">I love Linux. 🐧</h2>
+	      <h2 style="color:var(--highlight)" font-family="Twemoji">I Love Linux. 🐧</h2>
 	      <code>Artix | DWM | ST | EMACS+VIM </code>
 	      
-	      <h2 style="color:#f4f222"> Likes.. </h2>
+	      <h2 style="color:var(--highlight)"> Likes.. </h2>
 	      <code> Reads | Flix | Thinks <br>
 		Philosophy | Psychology | Computers <br>
 		Privacy | CopyLeft | OpenSource </code>
@@ -251,16 +258,16 @@
 
           </article>
 
-	  <aside style="border:1px solid #7f236e; position: relative" >
+	  <aside style="border:1px solid var(--extralightcolor); position: relative" >
 	    <special-quote>
 	      ❝ Life main tante ho rakhe hai....! ❞ 
 	    </special-quote>
 	  </aside>
 
-	  <p style="color:#f4f222"> ---xoxo--- </p>
+	  <p style="color:var(--highlight)"> ---xoxo--- </p>
 
 	  <article>
-	    <div style="border:1px solid #16b746; padding: 15px; position: static">
+	    <div style="border:1px solid var(--greencolor); padding: 15px; position: static">
 	      <p> VISITS </p>
 	      <script type="text/javascript" src="//counter.websiteout.net/js/2/10/0/1"></script> 
 	    </div>
@@ -272,7 +279,24 @@
       ---- HiDDEN CODE -----
       ---- ONLY Real HACKERS 
       ---- could FiND This -- ---
-	<p> This website is databaseless, javascriptless, and buildshit-free, so you can edit your website with a text editor and upload it somewhere like a normal person. <label for="fn1">1</label><input type="checkbox" id="fn1"> <small> This website is based on John Does's Page from <a href="https://john-doe.neocities.org" target="_blank" rel="noopener noreferrer">Neocities</a>.</small> <p>
+	.-=( Pac-Man [7] )=-.
+	================================================.
+	.-.   .-.     .--.                         |
+	| OO| | OO|   / _.-' .-.   .-.  .-.   .''.  |
+	|   | |   |   \  '-. '-'   '-'  '-'   '..'  |
+	'^^^' '^^^'    '--'                         |
+	===============.  .-.  .================.  .-.  |
+        | |   | |                |  '-'  |
+        | |   | |                |       |
+        | ':-:' |                |  .-.  |
+	l42            |  '-'  |                |  '-'  |
+	==============='       '================'       |
+	
+      ------------------------------------------------
+	Thank you for visiting https://asciiart.website/
+	This ASCII pic can be found at
+	https://asciiart.website/index.php?art=video%20games/pac%20man
+
       --- Ohh you find it --- 
       --- Congrats! You are A ------ 
       ----- A Hacker!--- ---->
@@ -287,10 +311,11 @@
 	  <h2>📧 Personal Links: </h2> 
 	  <div>
 	    <ul>
+	      <li>Mail: <a href="mailto:neovoid@hi2.in" target="_blank" rel="noopener noreferrer"> neovoid@hi2.in </a> </li>
 	      <li>IRC: <a href="irc://irc.libera.chat/neovoid" target="_blank" rel="noopener noreferrer">#neovoid@libera.chat</a> </li>
 	      <li>MATRIX: <a href="https://matrix.to/#/@void00r:matrix.org" target="_blank" rel="noopener noreferrer">#void00r:matrix.org</a> </li>
+	      <li>Telegram: <a href="https://telegram.me/void00r" target="_blank" rel="noopener noreferrer">@void00r</a> </li>
 	      <li>Gits: <a href="https://github.com/void00r" target="_blank" rel="noopener noreferrer"> void00r</a></li>
-	      <li>Mail: <a href="mailto:neovoid@hi2.in" target="_blank" rel="noopener noreferrer"> neovoid@hi2.in </a> </li>
 	    </ul>
 	  </div>
 	</article>
@@ -325,15 +350,59 @@
       ----------- -->
       
       <section id="blog">
+
+	<article>
+	  <h2><time>21-03-2022</time> Ascii code testing</h2>
+	  <div>
+	    <textarea id="#blog"readonly rows="20">
+                LINUX TAUGHT ME TO           
+ (       "     )  COMPILE MY OWN SOFTWARES   
+  ( _  *         FROM SCRATCH
+     * (     /      \    ___                
+        "     "        _/ /                 
+       (   *  )    ___/   |                 
+         )   "     _ o)'-./__               
+        *  _ )    (_, . $$$                 
+        (  )   __ __ 7_ $$$$                
+         ( :  { _)  '---  $\                
+    ______'___//__\   ____, \               
+     )           ( \_/ _____\_              
+   .'             \   \------''.            
+   |='           '=|  |         )           
+   |               |  |  .    _/            
+    \    (. ) ,   /  /__I_____\             
+     '._/_)_(\__.'   (__,(__,_]             
+    @---()_.'---@ 
+
+	    </textarea>
+	  </div>
+
+	</article>
+
+	<article>
+	  <h2><time>17-03-2022</time> Interesting things about this Site. </h2>
+	  <div>
+	    <ul>
+	      <li> You'd be surprised but Yes, Its a Single HTML File.<label for="also">read more</label><input type="checkbox" id="also"><small> <p>This website is a single <abbr title="Hypertext Markup Language">HTML</abbr> file. It simply uses the <code>#anchor</code> suffix (from <a href="http://info.cern.ch/hypertext/WWW/Addressing/Addressing.html" target="_blank" rel="noopener noreferer">1992</a>) and the <code>:target</code> <abbr title="Cascading Style Sheets">CSS</abbr> selector to show and hide pages/content.</p></small> </li>
+	      <li> The site inspired by minimal yet responsive layout of John Does's Site from <a href="https://john-doe.neocities.org" target="_blank" rel="noopener noreferrer">Neocities</a>.<label for="based">expand</label><input type="checkbox" id="based"> <small> <p> This website is databaseless, javascriptless, and builds#$t-free, so you can edit your website with a text editor and upload it somewhere like a normal person.</p></small> </li>
+	      <li> Every Link on this site opens in new tab. <label for="tabs">but why</label><input type="checkbox" id="tabs"><small>You can always opens links on any site with SHIFT+CLICKS but in this site you dont have to. <textarea readonly rows="2"> <a href="<link>" target="_blank" rel="noopener noreferrer">link</a></textarea> To avoid Security concerns with <code>target="_blank"</code> I strongly recommend that you always add <code>rel="noreferrer noopener"</code> to the anchor element to prevent a type of phishing known as <a href="https://en.wikipedia.org/wiki/Tabnabbing" target="_blank" rel="noopener noreferer">tabnabbing</a>.<label for="tabnab">explain</label><input type="checkbox" id="tabnab"><small><ul> <li> <a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/" target="_blank" rel="noopener noreferer"> [1] Alex Yumashev's article on Tabnabbing.</a></li> <li> <a href="https://owasp.org/www-community/attacks/Reverse_Tabnabbing" target="_blank" "rel="noopener noreferer"> [2] Reverse Tabnabbing - OWASP </a></li></ul> </small>
+	      </small></li>
+	      <li>This blog is subject to updated.(to be continued..)</li>
+	      <li><a href="mailto:neovoid@hi2.in" target="_blank" rel="noopener noreferer"> Suggestions are welcome </a> cuz this list looks too boring (colorless)</li>
+	    </ul>
+
+	  </div>
 	
+	</article>
+
 	<article>
 	  <h2><time>16-03-2022</time> Beautify Linux Manuals with Bat</h2>
 	  <div>
-	    <p> Whatever you are doing, stop right away and do this right now cuz this is <b>IMPORTANT!<b>. <br>
-		  Ever wonder what if you can enjoy your <abbr title="Reading the Fine Manual">RTFM</abbr> experience with cheering colors. Well Wait no more.</p>
-	    <p style="color:#ffffff"> Just set this enviromental variable inside your .profile or .zprofile and see the magic of bat. </p>
-	    <p><code style="color:#f4f222"> export MANPAGER="sh -c 'col -bx | bat -l man -p'" </code> <br> </p>
-	    <p style="color:#ffffff">Thanks me later.</p>
+	    <p style="color:var(--textcolor)"> Whatever you are doing, stop right away and do this right now cuz this is <b>IMPORTANT!<b>. <br> </p>
+	    <p> Ever wonder? WHAT IF your favourite RTFM <label for="rtfm">^</label><input type="checkbox" id="rtfm"><small><a href="https://explainxkcd.com/wiki/index.php/293:_RTFM" target="_blank" rel="noopener noreferer">Reading the Fine Manual</a></small> can be experienced with cheering colors of BAT <label for="bat">^</label><input type="checkbox" id="bat"><small> <a href="https://github.com/sharkdp/bat" target="_blank" rel="noopener noreferer"> BAT - A cat(1) clone with syntax highlighting and Git integration.</a></small>. Well Wait no more.</p>
+	    <p style="color:var(--textcolor)"> Just set this enviromental variable inside your .profile or .zprofile and see the magic of bat. </p>
+	    <p><code style="color:var(--highlight)"> export MANPAGER="sh -c 'col -bx | bat -l man -p'" </code> <br> </p>
+	    <p style="color:var(--textcolor)">Thanks me later.</p>
 	  </div>
 	</article>
 
@@ -346,11 +415,11 @@
             </figure>
 	    
             <blockquote>
-	      <p style="color:#16b746"><em>Life gives lemons. </em> </p>
+	      <p style="color:var(--greencolor)"><em>Life gives lemons. </em> </p>
 
-	      <p style="color:#16b746"><em>It is the thou art of juice making that defines thou lemonade's taste. </em> </p>
+	      <p style="color:var(--greencolor)"><em>It is the thou art of juice making that defines thou lemonade's taste. </em> </p>
 	      
-	      <p style="color:#f4f222"><em>- The guy who loves pineapples. </em></p>
+	      <p style="color:var(--highlight)"><em>- The guy who loves pineapples. </em></p>
 	    </blockquote>
 	    
 	  </div>
@@ -375,12 +444,12 @@
           <a href="#img-04"><img loading="lazy" alt="" src="gl/ced.jpg"></a>
           <a href="#img-05"><img loading="lazy" alt="" src="gl/cs.jpg"></a>
           <a href="#img-06"><img loading="lazy" alt="" src="gl/qe.png"></a>
-          <a href="#img-07"><img loading="lazy" alt="" src="gl/hc.jpg"></a>
+          <a href="#img-07"><img loading="lazy" alt="" src="gl/hc.png"></a>
           <a href="#img-08"><img loading="lazy" alt="" src="gl/rc.png"></a>
           <a href="#img-09"><img loading="lazy" alt="" src="gl/hb.jpg"></a>
           <a href="#img-10"><img loading="lazy" alt="" src="gl/we.jpg"></a>
           <a href="#img-11"><img loading="lazy" alt="" src="gl/mo.jpg"></a>
-          <a href="#img-12"><img loading="lazy" alt="" src="gl/bk.jpg"></a>
+          <a href="#img-12"><img loading="lazy" alt="" src="gl/bk.png"></a>
           <a href="#img-13"><img loading="lazy" alt="" src="gl/bq.jpg"></a>
           <a href="#img-14"><img loading="lazy" alt="" src="gl/sp.jpg"></a>
           <a href="#img-15"><img loading="lazy" alt="" src="gl/ch.png"></a>
@@ -398,7 +467,6 @@
       ----------- -->
 
       <section id="portfolio">
-
         <div class="slides">
           <figure class="cover"> <img loading="lazy" alt="" src="img/snape.jpg"></figure>
           <figure class="cover"><img loading="lazy" alt="" src="img/Alwaysextract.jpg"></figure>
@@ -450,12 +518,12 @@
     <a href="#photos" class="lightbox" id="img-04"><img loading="lazy" alt="" src="gl/ced.jpg"></a>
     <a href="#photos" class="lightbox" id="img-05"><img loading="lazy" alt="" src="gl/cs.jpg"></a>
     <a href="#photos" class="lightbox" id="img-06"><img loading="lazy" alt="" src="gl/qe.png"></a>
-    <a href="#photos" class="lightbox" id="img-07"><img loading="lazy" alt="" src="gl/hc.jpg"></a>
+    <a href="#photos" class="lightbox" id="img-07"><img loading="lazy" alt="" src="gl/hc.png"></a>
     <a href="#photos" class="lightbox" id="img-08"><img loading="lazy" alt="" src="gl/rc.png"></a>
     <a href="#photos" class="lightbox" id="img-09"><img loading="lazy" alt="" src="gl/hb.jpg"></a>
     <a href="#photos" class="lightbox" id="img-10"><img loading="lazy" alt="" src="gl/we.jpg"></a>
     <a href="#photos" class="lightbox" id="img-11"><img loading="lazy" alt="" src="gl/mo.jpg"></a>
-    <a href="#photos" class="lightbox" id="img-12"><img loading="lazy" alt="" src="gl/bk.jpg"></a>
+    <a href="#photos" class="lightbox" id="img-12"><img loading="lazy" alt="" src="gl/bk.png"></a>
     <a href="#photos" class="lightbox" id="img-13"><img loading="lazy" alt="" src="gl/bq.jpg"></a>
     <a href="#photos" class="lightbox" id="img-14"><img loading="lazy" alt="" src="gl/sp.jpg"></a>
     <a href="#photos" class="lightbox" id="img-15"><img loading="lazy" alt="" src="gl/ch.png"></a>
