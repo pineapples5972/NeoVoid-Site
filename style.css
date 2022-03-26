@@ -2,45 +2,58 @@
     
     /* Color scheme */
     /* #F7F625 #D18200 #06F39E */
-    --textcolor: #fcfbf9; /*#dadada;*/
-    --bgcolor: #040304;     /* #0f0d11; */
-    --highlight: #f7F625;  /* #F5DF50; */
-    --neoncolor: #F5DF50;
-    --hovercolor: #FFcf33;
-    --shadowcolor: #F7DA08; /* animation */
-    --greencolor: #06F39E;  /* #16b746; code #53fc5e */
+    
+         /* #0f0d11; */
+    --bgbgcolor: #0b090b;
+ /* #F5DF50; */
+    /* animation */
+     /* #16b746; code #53fc5e */
     --extracolor: #ff60ca;  /*#ff60ca; */
     --extralightcolor: #F0DF; /*#F39510 FBFF31; #D18200; #7f236e;*/
-    --wallpaper: url("img/aaa.webp");
+    /*--wallpaper: url("img/bg.webp");*/
+    
 
-    /* Light Color scheme */
-    --ltextcolor: #409ecc;
-    --lbgcolor: #002a44;;
-    --lhighlight: #29e0d5;
-    --lgreencolor: #ff60ca;
-    --lshadowcolor: #65b7fa; /* animation */
-    --lneoncolor: #65b7fa;
+    /* COLORS */
+
+    --verydarkmagenta: #040304;
+    --grayishmagenta: #dada; 
+    --mostlyblack: #0f0d11;      
+    --limegreen: #06F39E; 
+    --brightcyan: #29e0d5;  
+    --softblue: #65b7fa;
+    --veryvividyellow: #f7F625; 
+    --softyellow: #F5DF50;
+    --hovercolor: #FFcf33;
+    --verysoftyellow: #F7DA08; 
+    --vividyellow: #FFcf33;
+    --lightpink: #ff60ca;
+    --strongmagenta: #d509be;   
+    --verydarkblue: #002a44;
+    --strongdarkblue:#022439;
+
+    /* Color scheme */
+    --textcolor: #dada; 
+    --bgcolor: #0f0d11;      
+    --highlight: #29e0d5;  
+    --neoncolor: #65b7fa;
+    --hovercolor: #FFcf33;
+    --shadowcolor: #65b7fa; 
+    --greencolor: #ff60ca;  
+    --lightpink: #ff60ca;  
+    --extracolor: #F0DF;  
+    --extralightcolor: #F0DF; 
   }
+
+
+/* Dark Color Scheme */
 
 @media (prefers-color-scheme: dark) {
     * {
 	--textcolor: var(--textcolor);
-	--bgcolor: var(--bgcolor); /* #0b0703; #0f0d11 #0d0d0f; #141414; */
-	--highlight: var(--highlight); /* #dd61ce #ba4cac; #ffc400; */
+	--bgcolor: var(--bgcolor);
+	--highlight: var(--highlight); 
     }
 }
-
-@media (prefers-color-scheme: lightl) {
-    * {
-	--textcolor: var(--ltextcolor);
-	--bgcolor: var(--lbgcolor); /* #0b0703; #0f0d11 #0d0d0f; #141414; */
-	--highlight: var(--lhighlight); /* #dd61ce #ba4cac; #ffc400; */
-	--greencolor: var(--lgreencolor);
-	--shadowcolor: var(--lshadowcolor);
-	--neoncolor: var(--lneoncolor);
-    }
-}
-
 
 /* ------- Sections ------- */
 
@@ -72,11 +85,11 @@ section#home { /* Show #home by default */
 }
 
 body {
+
     font-family: JetBrains Mono, system-ui, sans-serif;
     line-height: 1.4;
     color: var(--textcolor);
-    background: var(--wallpaper);
-    background-size: 1024px 768px;
+    background-color: var(--bgbgcolor);
     position: relative;
     max-width: 64em;  /* remove this for a full-width layout */
     margin: 0 auto;  /* centers the layout */
@@ -146,18 +159,18 @@ div {
 
 edges {
     padding: 1vw;
-    border: 1px solid var(--greencolor);
+    border: 1px solid var(--lightpink);
 }
 
 p {
-    color: var(--greencolor);  
+    color: var(--lightpink);  
 }
 
 code, textarea {
     font-family: JetBrains Mono, monospace;
     font-size: 1em;
     opacity: 30;
-    color: var(--greencolor);  
+    color: var(--lightpink);  
 }
 
 a:hover {
@@ -168,7 +181,7 @@ a:hover {
 aside {
     width: 30%;
     padding: 10px;
-    border: 1px solid var(--greencolor);
+    border: 1px solid var(--textcolor);
     float: right;
     color: var(--textcolor);
     background: var(--bgcolor);

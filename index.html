@@ -1,5 +1,6 @@
 <!-- LAST UPDATED -- Mon Mar 21 01:24:34 PM IST 2022 -->
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -26,8 +27,8 @@
     <!-- special font for special quotes-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora&family=Marck+Script&family=Rye&display=swap">
 
-    <!-- Twemoji Font Support -->
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <!-- Twemoji Font Support
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script> -->
 
   </head>
 
@@ -66,7 +67,7 @@
 
 	   <aside style="border: 1px solid var(--highlight);"> 
 	    <figure>
-              <img loading="lazy" alt="🍍" src="img/pitr.png" width="299" height="230">
+              <img loading="lazy" alt="🍍" title="I love Pineapple" src="img/pitr.png" width="299" height="230">
 	    </figure>
 	   </aside> 
 	  
@@ -181,7 +182,7 @@
 	<article>
 	  <h2><time>16-03-2022</time> Beautify Linux Manuals with Bat</h2>
 	  <div>
-	    <p style="color:var(--textcolor)"> Whatever you are doing, stop right away and do this right now cuz this is <b>IMPORTANT!<b>. <br> </p>
+	    <p style="color:var(--highlight)"> Whatever you are doing, stop right away and do this right now cuz this is <b>IMPORTANT!<b>. <br> </p>
 	    <p> Ever wonder? WHAT IF your favourite RTFM <label for="rtfm">^</label><input type="checkbox" id="rtfm"><small><a href="https://explainxkcd.com/wiki/index.php/293:_RTFM" target="_blank" rel="noopener noreferer">Reading the Fine Manual</a></small> can be experienced with cheering colors of BAT <label for="bat">^</label><input type="checkbox" id="bat"><small> <a href="https://github.com/sharkdp/bat" target="_blank" rel="noopener noreferer"> BAT - A cat(1) clone with syntax highlighting and Git integration.</a></small>. Well Wait no more.</p>
 	    <p style="color:var(--textcolor)"> Just set this enviromental variable inside your .profile or .zprofile and see the magic of bat. </p>
 	    <p><code style="color:var(--highlight)"> export MANPAGER="sh -c 'col -bx | bat -l man -p'" </code> <br> </p>
