@@ -1,4 +1,4 @@
-<!-- Neo Was here -- Mon Mar 28 04:24:45 PM IST 2022 -->
+<!-- LAST UPDATED -- Mon Mar 21 01:24:34 PM IST 2022 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,30 +7,199 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <title>Neo Void's Site</title>
-
     <meta name="description" content="Neo Void's Site">
+
+    <!-- Recommended minimum -->
     <meta property="og:title" content="Neo Void">
-    <meta property="og:description" content="My Personal Website">
+    <meta property="og:description" content="Neo Void' Site">
+    <meta property="og:image" content="img/summary_large_image.png">
     <meta name="twitter:card" content="summary">
 
     <!-- favicon for site -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
-    <!-- 
-	 <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-	 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-	 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    -->
-	 <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- You could also inline the stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/jetbrains.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- special font for special quotes-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora&family=Marck+Script&family=Rye&display=swap">
 
-    <!-- Twemoji Font Support
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script> -->
+    <!-- Twemoji Font Support -->
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
+    <!-- foreground -->
+    <!-- old colors 
+    #4CAF50
+    #FFEE05
+    #EADAB1
+    Just colors
+    -->
+
+    <style>
+
+      @media (prefers-color-scheme: dark) {
+	  * {
+	      --textcolor: var(--textcolor);
+	      --bgcolor: var(--bgcolor); /* #0b0703; #0f0d11 #0d0d0f; #141414; */
+	      --highlight: var(--highlight); /* #dd61ce #ba4cac; #ffc400; */
+	  }
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box;
+	  
+	  /* Color scheme */
+
+	  --textcolor: #fcfbf9; /*#dadada;*/
+	  --bgcolor: #040304;     /* #0f0d11; */
+	  --highlight: #f4f222;  /* #F5DF50; */
+	  --neoncolor: #F5DF50;
+	  --hovercolor: #FFcf33;
+	  --shadowcolor: #F7DA08; /* animation */
+	  --greencolor: #3EE77B;  /* #16b746; code #53fc5e */
+	  --extracolor: #f99509;  /*#ff60ca; */
+	  --extralightcolor: #E49200; /*#7f236e;*/
+	}
+
+      
+      /* ------- Sections ------- */
+      
+      section {
+	  padding: calc(6em + 5vw) 5vw 8vw 5vw;
+	  /* ! Everything below is needed ! */
+	  display: none; 
+	  position: absolute;
+	  top: 0;
+	  min-height: 100vh;
+	  width: 100%;
+	  background: var(--bgcolor);
+      }
+      
+      section:target { /* Show section */
+	  display: block;
+      }
+      
+      section#home { /* Show #home by default */
+	  display: block;
+      }
+      
+      @font-face {
+	  font-family: JetBrains Mono;
+	  src: url(fonts/JetBrainsMono-Regular.woff2);
+	  font-family: Twemoji;
+	  src: url(fonts/twemoji.ttf);
+      }
+
+      body {
+          font-family: JetBrains Mono, system-ui, sans-serif;
+          line-height: 1.4;
+          color: var(--textcolor);
+          background: var(--bgcolor);
+          position: relative;
+          max-width: 64em;  /* remove this for a full-width layout */
+          margin: 0 auto;  /* centers the layout */
+      }
+
+      h2, h3, h4 {
+	  font-size: 1em;
+	  font-weight: 600;
+	  margin: 1.6em 0 .6em 0;
+      }
+
+      p, ul, ol, article {
+	  max-width: 60ch; /* Limit line-length to 60 characters */
+	  margin-bottom: .6em;
+      }
+
+
+      header h1 {
+	  font-size: 2em;
+	  flex: 1; /* pushes nav to the right */
+	  white-space: nowrap;
+	  /* padding: 0 5vw .5em 0;*/
+      }
+
+      neon {
+	  font-size: 2em;
+	  flex: 1;
+	  white-space: nowrap;
+	  color: var(--neoncolor);
+	  animation: animate 1s ease-in-out infinite alternate;
+      }
+
+       @keyframes animate{
+	   from{
+	       text-shadow: 0 0 10px var(--shadowcolor);
+	  }
+	   to{
+	       text-shadow: 0 0 20px var(--shadowcolor),
+			    0 0 5px var(--shadowcolor);
+	   }
+      }
+
+       .box a::after {
+	   content: " _";
+	   width: 0px;
+	   height: 0px;
+	   background: var(--highlight);
+	   display: inline-block;
+       }
+
+       @keyframes cursor-blink {
+	   0% {
+	       opacity: 0;
+	   }
+       }
+
+       .box a::after {
+	   animation: cursor-blink 1.5s steps(2) infinite;
+       }
+
+      div {
+	  padding: 30px; 
+	  border:1px solid var(--highlight);
+      }
+
+      edges {
+	  padding: 1vw;
+	  border: 1px solid var(--greencolor);
+      }
+
+      p {
+	  color: var(--greencolor);  
+      }
+
+      code, textarea {
+	  font-family: JetBrains Mono, monospace;
+	  font-size: 1em;
+	  opacity: 30;
+	  color: var(--greencolor);  
+      }
+
+      a:hover {
+	  border-bottom: 1px solid;
+	  border-top: 1px solid;
+      }
+
+      aside {
+	  width: 30%;
+	  padding: 10px;
+	  border: 1px solid var(--greencolor);
+	  float: right;
+	  color: var(--textcolor);
+	  background: var(--bgcolor);
+      }
+
+      special-quote {
+	  width: 30%;
+	  font-family: 'Marck Script', cursive;
+	  font-size: 130%;
+	  color: var(--extracolor);
+      }
+
+    </style>
 
   </head>
 
@@ -44,16 +213,15 @@
 	</span>
       </neon>
 
-
       <edges>
-	<nav>
-          <a href="#links">Links</a>
-          <a href="#blog">Blog</a>
-          <a href="#photos">Photos</a>
-          <a href="#portfolio">Portfolio</a>
-	</nav>
+      <nav>
+        <a href="#links">Links</a>
+        <a href="#blog">Blog</a>
+        <a href="#photos">Photos</a>
+        <a href="#portfolio">Portfolio</a>
+      </nav>
       </edges>
-      
+
     </header>
     
     <main>
@@ -65,14 +233,14 @@
       <section id="home">
 	
 	  <blockquote style="opacity: 100">
-	    <p style="color:var(--highlight)"> 🌼 You are inside my mind...</p>
+	    <p style="color:var(--highlight)" font-family="Twemoji"> 🎃 <em>You are in my personal space beware of things you cant see here.</em></p>
 	  </blockquote>
 
-	   <aside style="border: 1px solid var(--highlight);"> 
+	  <aside style="border: 1px solid var(--highlight);">
 	    <figure>
-              <img loading="lazy" alt="🍍" title="I love Pineapples" src="img/pitr.png" width="299" height="230">
+              <img loading="lazy" alt="🍍" src="img/pitr.png" width="299" height="230">
 	    </figure>
-	   </aside> 
+	  </aside>
 	  
           <article>
 	    <div>
@@ -107,6 +275,32 @@
 
       </section>
       
+      <!-- ---------- ------
+      ---- HiDDEN CODE -----
+      ---- ONLY Real HACKERS 
+      ---- could FiND This -- ---
+	.-=( Pac-Man [7] )=-.
+	================================================.
+	.-.   .-.     .--.                         |
+	| OO| | OO|   / _.-' .-.   .-.  .-.   .''.  |
+	|   | |   |   \  '-. '-'   '-'  '-'   '..'  |
+	'^^^' '^^^'    '--'                         |
+	===============.  .-.  .================.  .-.  |
+        | |   | |                |  '-'  |
+        | |   | |                |       |
+        | ':-:' |                |  .-.  |
+	l42            |  '-'  |                |  '-'  |
+	==============='       '================'       |
+	
+      ------------------------------------------------
+	Thank you for visiting https://asciiart.website/
+	This ASCII pic can be found at
+	https://asciiart.website/index.php?art=video%20games/pac%20man
+
+      --- Ohh you find it --- 
+      --- Congrats! You are A ------ 
+      ----- A Hacker!--- ---->
+
       <!-- ----------
       ---- Links -----
       ----------- -->
@@ -156,15 +350,33 @@
       ----------- -->
       
       <section id="blog">
+
 	<article>
-	  <h2> <time> 28-03-2022 </time> And I started Swimming again... </h2>
+	  <h2><time>21-03-2022</time> Ascii code testing</h2>
 	  <div>
-  	    <p> After a very long time I have started going to swim at the nearest river dam of my village. </p>
-	    <p> I was bored and this is summer which makes things more boring for me. but hey plus thing we have water solution here. </p>
-	    <p>It was a sunny day, I was bored, trying online CTFs and making website and suddenly I picked this vibe of "sporting".... </p>
-	      
-	      <a href="blogs/swimming.html">...Read More </a>
+	    <textarea id="#blog"readonly rows="20">
+                LINUX TAUGHT ME TO           
+ (       "     )  COMPILE MY OWN SOFTWARES   
+  ( _  *         FROM SCRATCH
+     * (     /      \    ___                
+        "     "        _/ /                 
+       (   *  )    ___/   |                 
+         )   "     _ o)'-./__               
+        *  _ )    (_, . $$$                 
+        (  )   __ __ 7_ $$$$                
+         ( :  { _)  '---  $\                
+    ______'___//__\   ____, \               
+     )           ( \_/ _____\_              
+   .'             \   \------''.            
+   |='           '=|  |         )           
+   |               |  |  .    _/            
+    \    (. ) ,   /  /__I_____\             
+     '._/_)_(\__.'   (__,(__,_]             
+    @---()_.'---@ 
+
+	    </textarea>
 	  </div>
+
 	</article>
 
 	<article>
@@ -178,6 +390,7 @@
 	      <li>This blog is subject to updated.(to be continued..)</li>
 	      <li><a href="mailto:neovoid@hi2.in" target="_blank" rel="noopener noreferer"> Suggestions are welcome </a> cuz this list looks too boring (colorless)</li>
 	    </ul>
+
 	  </div>
 	
 	</article>
@@ -185,7 +398,7 @@
 	<article>
 	  <h2><time>16-03-2022</time> Beautify Linux Manuals with Bat</h2>
 	  <div>
-	    <p style="color:var(--highlight)"> Whatever you are doing, stop right away and do this right now cuz this is <b>IMPORTANT!<b>. <br> </p>
+	    <p style="color:var(--textcolor)"> Whatever you are doing, stop right away and do this right now cuz this is <b>IMPORTANT!<b>. <br> </p>
 	    <p> Ever wonder? WHAT IF your favourite RTFM <label for="rtfm">^</label><input type="checkbox" id="rtfm"><small><a href="https://explainxkcd.com/wiki/index.php/293:_RTFM" target="_blank" rel="noopener noreferer">Reading the Fine Manual</a></small> can be experienced with cheering colors of BAT <label for="bat">^</label><input type="checkbox" id="bat"><small> <a href="https://github.com/sharkdp/bat" target="_blank" rel="noopener noreferer"> BAT - A cat(1) clone with syntax highlighting and Git integration.</a></small>. Well Wait no more.</p>
 	    <p style="color:var(--textcolor)"> Just set this enviromental variable inside your .profile or .zprofile and see the magic of bat. </p>
 	    <p><code style="color:var(--highlight)"> export MANPAGER="sh -c 'col -bx | bat -l man -p'" </code> <br> </p>
@@ -286,18 +499,9 @@
 
       <!-- HIDDEN PAGE -->
 
-      <section id="404">
-	<h2> Code: 404 Page Not Found! </h2>
-        <p>You have reached to the end.</p>
+      <section id="if-you-want">
+        <p>This page is not referenced in the menu, for example.</p>
         <p><a href="#home">← back</a></p>
-	<button>I'm a button</button>
-	<kbd>Alt+F4</kbd>
-	<details>
-	  <summary>Spoiler alert!</summary>
-	  <p>You smell. 🙂</p>
-	</details>
-
-	
       </section>
 
     </main>
